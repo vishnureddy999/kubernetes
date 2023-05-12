@@ -5,15 +5,15 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: suberate-myapp
-  replicas: 1
+      app: suberate
+  replicas: 2
   template:
     metadata:
       labels:
-        app:suberate-myapp
+        app: suberate
     spec:
       containers:
-      - name:suberate
-        image:gcr.io/promising-cairn-386312/suberate:latest
-        ports:
-        - containerPort: 8051
+        - name: suberate
+          image: gcr.io/promising-cairn-386312/suberate:latest
+          ports:
+            - containerPort: 8051
