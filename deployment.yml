@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: suberate-myapp
+  name: suberate
 spec:
   selector:
     matchLabels:
@@ -16,4 +16,4 @@ spec:
         - name: suberate
           image: gcr.io/promising-cairn-386312/suberate:latest
           ports:
-            - containerPort: 8051
+            - containerPort: 8501
